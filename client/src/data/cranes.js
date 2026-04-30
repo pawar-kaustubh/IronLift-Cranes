@@ -89,7 +89,7 @@ export const CRANE_FLEET = [
     description:
       "Rough-terrain cranes are at home on sites where the ground is too uneven for standard mobile equipment.",
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+      "https://media.istockphoto.com/id/950637700/photo/telescopic-crane.jpg?s=612x612&w=0&k=20&c=iXLZm64QL3_H1yy7zmdG0K4KJdJc4US7F_GydvESXA0=",
     accentImage:
       "https://images.unsplash.com/photo-1763573655767-f3911d60b3ac?auto=format&fit=crop&w=1200&q=80",
     inquiryMessage:

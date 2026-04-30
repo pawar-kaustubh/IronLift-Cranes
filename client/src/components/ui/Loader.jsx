@@ -19,22 +19,39 @@ export default function Loader({ show }) {
             className="relative z-10 flex flex-col items-center gap-8"
           >
             {/* Crane hook SVG pulling up */}
-            <svg width="60" height="120" viewBox="0 0 60 120" fill="none">
-              <line x1="30" y1="0" x2="30" y2="70" stroke="#a1a1aa" strokeWidth="1" />
-              <motion.g
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <rect x="22" y="68" width="16" height="14" fill="#f59e0b" stroke="#000" strokeWidth="1" />
-                <path
-                  d="M30 82 Q30 102 22 102 L22 96 L26 96 L26 100"
-                  stroke="#f59e0b"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeLinecap="square"
-                />
-              </motion.g>
-            </svg>
+           <svg width="60" height="120" viewBox="0 0 60 120" fill="none">
+  <line x1="30" y1="0" x2="30" y2="70" stroke="#a1a1aa" strokeWidth="1" />
+
+  <motion.g
+    animate={{ y: [0, 8, 0] }}
+    transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+  >
+    {/* Hook body */}
+    <path
+      d="M30 70 
+         v10 
+         a12 12 0 1 1 -12 12 
+         h6 
+         a6 6 0 1 0 6 -6 
+         v-6"
+      stroke="#f59e0b"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* Hook block */}
+    <rect
+      x="22"
+      y="60"
+      width="16"
+      height="10"
+      rx="2"
+      fill="#f59e0b"
+    />
+  </motion.g>
+</svg>
             <div className="flex flex-col items-center gap-3">
               <div className="type-h2 uppercase text-white font-bold">
                 Iron<span className="text-amber-500">Lift</span>

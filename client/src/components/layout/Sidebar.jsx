@@ -5,15 +5,17 @@ import { useScroll, useTransform, motion } from "framer-motion";
  * Hidden on small screens to keep the layout clean.
  */
 export default function Sidebar() {
-  const { scrollYProgress } = useScroll();
-  // Hook lowers from 60 -> 540 as page scrolls
-  const hookY = useTransform(scrollYProgress, [0, 1], [60, 540]);
-  const cableLen = useTransform(scrollYProgress, [0, 1], [60, 540]);
+const { scrollYProgress } = useScroll();
+
+const maxDrop = window.innerHeight * 0.6;
+
+const hookY = useTransform(scrollYProgress, [0, 1], [60, maxDrop]);
+const cableLen = useTransform(scrollYProgress, [0, 1], [60, maxDrop]);
   const rot = useTransform(scrollYProgress, [0, 1], [-3, 3]);
 
   return (
     <div
-      className="hidden lg:block fixed top-0 right-0 h-screen w-[140px] z-30 pointer-events-none select-none"
+      className="hidden lg:block fixed top-0 right-0 h-[calc(100vh-4rem)] w-[140px] z-30 pointer-events-none select-none"
       aria-hidden="true"
       data-testid="side-crane"
     >
@@ -64,22 +66,39 @@ export default function Sidebar() {
         {/* trolley + cable + hook (moves with scroll) */}
         <motion.line x1="38" x2="38" y1="68" stroke="#a1a1aa" strokeWidth="1" y2={cableLen} />
 
-        <motion.g style={{ y: hookY, rotate: rot, originX: "38px", originY: "0px" }}>
-          {/* trolley shadow at top of cable */}
-          <rect x="32" y="64" width="12" height="6" fill="#27272a" />
-          {/* hook block */}
-          <rect x="30" y="0" width="16" height="14" fill="#f59e0b" stroke="#000" strokeWidth="1" />
-          <rect x="33" y="3" width="3" height="8" fill="#0a0a0a" />
-          <rect x="40" y="3" width="3" height="8" fill="#0a0a0a" />
-          {/* hook curve */}
-          <path
-            d="M38 14 Q38 30 30 30 L30 24 L34 24 L34 28"
-            stroke="#f59e0b"
-            strokeWidth="2.5"
-            fill="none"
-            strokeLinecap="square"
-          />
-        </motion.g>
+  <motion.g
+  style={{
+    y: hookY,
+    rotate: rot,
+    originX: "38px",
+    originY: "0px",
+  }}
+>
+  {/* trolley */}
+  <rect x="32" y="60" width="12" height="8" rx="1" fill="#27272a" />
+
+  {/* hook block */}
+  <rect x="30" y="0" width="16" height="12" rx="2" fill="#f59e0b" />
+
+  {/* inner detail (gives depth) */}
+  <rect x="33" y="3" width="2.5" height="6" fill="#0a0a0a" />
+  <rect x="40.5" y="3" width="2.5" height="6" fill="#0a0a0a" />
+
+  {/* improved hook curve */}
+  <path
+    d="M38 12 
+       v8 
+       a10 10 0 1 1 -10 10 
+       h5 
+       a5 5 0 1 0 5 -5 
+       v-4"
+    stroke="#f59e0b"
+    strokeWidth="2.5"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</motion.g>
       </svg>
     </div>
   );

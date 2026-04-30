@@ -30,4 +30,4 @@ export const HIGHLIGHTS = [
 ];
 
 export const ABOUT_IMAGE =
-  "https://images.unsplash.com/photo-1494145904043-0dca59b4bbad?auto=format&fit=crop&w=1600&q=80";
+  "https://plus.unsplash.com/premium_photo-1681992176275-a1a591dbec58?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y3JhbmUlMjBjb25zdHJ1Y3Rpb258ZW58MHx8MHx8fDA%3D";

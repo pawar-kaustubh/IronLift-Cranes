@@ -57,7 +57,7 @@ export default function Contact() {
           <div className="lg:col-span-5">
             <div className="border border-zinc-900 bg-[#0a0a0a] overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
-                <img
+                <img loading= "lazy"
                   src={
                   
                     "https://media.istockphoto.com/id/1301247952/photo/a-bucket-or-aerial-platform-boom-truck-driving-through-the-desert-of-utah-near-moab-wilson.webp?a=1&b=1&s=612x612&w=0&k=20&c=woZgCHv9zWSXdQuSWOKYUBLOh4qWHZbb55HeB6eMsV8="

@@ -1,5 +1,5 @@
 import { useScroll, useTransform, motion } from "framer-motion";
-
+import { useRef } from "react";
 /**
  * Fixed side SVG crane — boom + tower stays put, hook lowers as user scrolls.
  * Hidden on small screens to keep the layout clean.

@@ -70,7 +70,7 @@ export const CRANE_FLEET = [
     description:
       "All-terrain cranes handle transition-heavy jobs where the rig must travel on public roads and still work on uneven job sites.",
     image:
-      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80",
+      "https://www.manitowoc.com/sites/default/files/styles/product_1st_image/public/media/divers/images/2021-11/GMK4080-3-silhouette-transparent-800x600.png?itok=Xcq8aBEQ",
     accentImage:
       "https://images.unsplash.com/photo-1763573655767-f3911d60b3ac?auto=format&fit=crop&w=1200&q=80",
     inquiryMessage:
@@ -108,7 +108,7 @@ export const CRANE_FLEET = [
     description:
       "Truck-mounted cranes reduce downtime when the project requires a lift crew that can move quickly between locations.",
     image:
-      "https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1583246820648-e06ee5e2c267?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3JhbmUlMjB0cnVja3xlbnwwfHwwfHx8MA%3D%3D",
     accentImage:
       "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
     inquiryMessage:
